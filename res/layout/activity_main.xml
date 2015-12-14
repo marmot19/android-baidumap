@@ -9,6 +9,7 @@
     android:layout_height="fill_parent"  
     android:clickable="true" />
 	
+<<<<<<< HEAD
     <RelativeLayout 
         android:id="@+id/id_marker_layout"
 	    android:layout_width="match_parent"
@@ -84,4 +85,6 @@
 	    </RelativeLayout>
 	
 	</RelativeLayout>
+=======
+>>>>>>> e27a7116dd12eee1ab85b11141cba00743eeb04d
 </RelativeLayout>

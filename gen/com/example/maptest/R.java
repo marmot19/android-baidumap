@@ -22,6 +22,7 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
+<<<<<<< HEAD
         public static final int bg_map_bottom=0x7f020000;
         public static final int ic_launcher=0x7f020001;
         public static final int icon_gcoding=0x7f020002;
@@ -52,6 +53,20 @@ public final class R {
     public static final class layout {
         public static final int activity_main=0x7f030000;
         public static final int marker_layout=0x7f030001;
+=======
+        public static final int ic_launcher=0x7f020000;
+        public static final int navi_arrow=0x7f020001;
+    }
+    public static final class id {
+        public static final int bmapView=0x7f080000;
+        public static final int id_map_command=0x7f080001;
+        public static final int id_map_reset=0x7f080004;
+        public static final int id_map_site=0x7f080002;
+        public static final int id_map_traffic=0x7f080003;
+    }
+    public static final class layout {
+        public static final int activity_main=0x7f030000;
+>>>>>>> e27a7116dd12eee1ab85b11141cba00743eeb04d
     }
     public static final class menu {
         public static final int main=0x7f070000;

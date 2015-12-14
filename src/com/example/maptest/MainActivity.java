@@ -1,13 +1,17 @@
 package com.example.maptest;
 
+<<<<<<< HEAD
 import java.util.List;
 
+=======
+>>>>>>> e27a7116dd12eee1ab85b11141cba00743eeb04d
 import com.baidu.location.BDLocation;
 import com.baidu.location.BDLocationListener;
 import com.baidu.location.LocationClient;
 import com.baidu.location.LocationClientOption;
 import com.baidu.mapapi.SDKInitializer;
 import com.baidu.mapapi.map.BaiduMap;
+<<<<<<< HEAD
 import com.baidu.mapapi.map.BaiduMap.OnMapClickListener;
 import com.baidu.mapapi.map.BaiduMap.OnMarkerClickListener;
 import com.baidu.mapapi.map.BitmapDescriptor;
@@ -23,6 +27,16 @@ import com.baidu.mapapi.map.MyLocationData;
 import com.baidu.mapapi.map.OverlayOptions;
 import com.baidu.mapapi.model.LatLng;
 import com.example.maptest.MyOrientionListener.OnOrientationListener;
+=======
+import com.baidu.mapapi.map.BitmapDescriptor;
+import com.baidu.mapapi.map.BitmapDescriptorFactory;
+import com.baidu.mapapi.map.MapStatusUpdate;
+import com.baidu.mapapi.map.MapStatusUpdateFactory;
+import com.baidu.mapapi.map.MapView;
+import com.baidu.mapapi.map.MyLocationConfiguration;
+import com.baidu.mapapi.map.MyLocationData;
+import com.baidu.mapapi.model.LatLng;
+>>>>>>> e27a7116dd12eee1ab85b11141cba00743eeb04d
 import com.baidu.mapapi.map.MyLocationConfiguration.LocationMode;
 
 import android.app.Activity;
@@ -30,11 +44,15 @@ import android.content.Context;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+<<<<<<< HEAD
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+=======
+import android.view.Window;
+>>>>>>> e27a7116dd12eee1ab85b11141cba00743eeb04d
 import android.widget.Toast;
 
 public class MainActivity extends Activity {  
@@ -43,12 +61,15 @@ public class MainActivity extends Activity {
     
     private Context context;
     
+<<<<<<< HEAD
     private LocationMode mLocationMode;
     
 //    覆盖物相关
     private BitmapDescriptor mMarker;
     private RelativeLayout mMarkerLy;
     
+=======
+>>>>>>> e27a7116dd12eee1ab85b11141cba00743eeb04d
 //    定位相关
     private LocationClient mLocationClient;
     private MylocationListener mLocationListener;
@@ -57,8 +78,11 @@ public class MainActivity extends Activity {
     private double mLongtitude;
 //    自定义定位图标
     private BitmapDescriptor mIconLocation;
+<<<<<<< HEAD
     private MyOrientionListener myOrientationListener;
     private float mCurrentX;
+=======
+>>>>>>> e27a7116dd12eee1ab85b11141cba00743eeb04d
     
     @Override  
     protected void onCreate(Bundle savedInstanceState) {  
@@ -71,6 +95,7 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main); 
         initView();
 //        初始化定位
+<<<<<<< HEAD
         this.context = this;
         initLocation();
         initMarker();
@@ -122,6 +147,13 @@ public class MainActivity extends Activity {
     }
     private void initLocation() {
     	mLocationMode = LocationMode.NORMAL;
+=======
+        initLocation();
+        this.context = this;
+    }  
+    
+    private void initLocation() {
+>>>>>>> e27a7116dd12eee1ab85b11141cba00743eeb04d
     	mLocationClient = new LocationClient(this);
     	mLocationListener = new MylocationListener(); 
     	mLocationClient.registerLocationListener(mLocationListener);
@@ -136,6 +168,7 @@ public class MainActivity extends Activity {
 //    	初始化图标
     	mIconLocation = BitmapDescriptorFactory
     			.fromResource(R.drawable.navi_arrow);
+<<<<<<< HEAD
     	myOrientationListener = new MyOrientionListener(context);
     	
     	myOrientationListener.setOnOrientationListener(new OnOrientationListener() {
@@ -146,6 +179,8 @@ public class MainActivity extends Activity {
 				mCurrentX = x;
 			}
 		});
+=======
+>>>>>>> e27a7116dd12eee1ab85b11141cba00743eeb04d
     }
     private void initView(){
     	//获取地图控件引用  
@@ -168,8 +203,11 @@ public class MainActivity extends Activity {
     	mBaiduMap.setMyLocationEnabled(true);
     	if(!mLocationClient.isStarted())
     		mLocationClient.start();
+<<<<<<< HEAD
 //    	开启方向传感器
     	myOrientationListener.start();
+=======
+>>>>>>> e27a7116dd12eee1ab85b11141cba00743eeb04d
     }
     
     @Override  
@@ -186,8 +224,11 @@ public class MainActivity extends Activity {
 //    	关闭定位
     	mBaiduMap.setMyLocationEnabled(false);
     	mLocationClient.stop();
+<<<<<<< HEAD
 //    	停止方向传感器
     	myOrientationListener.stop();
+=======
+>>>>>>> e27a7116dd12eee1ab85b11141cba00743eeb04d
     }
     
     @Override  
@@ -223,6 +264,7 @@ public class MainActivity extends Activity {
     	case  R.id.id_map_reset:
     		centerToMyLocation();
     		break;
+<<<<<<< HEAD
     	case  R.id.id_map_mode_common:
     		mLocationMode = LocationMode.NORMAL;
     		break;
@@ -235,6 +277,8 @@ public class MainActivity extends Activity {
     	case  R.id.id_add_overlay:
     		addOverlays(Info.infos);
     		break;
+=======
+>>>>>>> e27a7116dd12eee1ab85b11141cba00743eeb04d
     	default:
     		break;
     	}
@@ -242,6 +286,7 @@ public class MainActivity extends Activity {
     }
     
     /**
+<<<<<<< HEAD
      * 添加覆盖物
      * @param infos
      */
@@ -268,6 +313,8 @@ public class MainActivity extends Activity {
 	}
 
 	/**
+=======
+>>>>>>> e27a7116dd12eee1ab85b11141cba00743eeb04d
      * 定位到我的位置
      */
 	private void centerToMyLocation() {
@@ -280,19 +327,30 @@ public class MainActivity extends Activity {
 
 		@Override
 		public void onReceiveLocation(BDLocation location) {
+<<<<<<< HEAD
 			MyLocationData data = new MyLocationData.Builder()
 					.direction(mCurrentX)//
+=======
+			MyLocationData data = new MyLocationData.Builder() //
+>>>>>>> e27a7116dd12eee1ab85b11141cba00743eeb04d
 					.accuracy(location.getRadius())//
 					.latitude(location.getLatitude())//
 					.longitude(location.getLongitude())//
 					.build();
 			
 			mBaiduMap.setMyLocationData(data);
+<<<<<<< HEAD
 //			设置自定义图标
 			MyLocationConfiguration config = new //
 					MyLocationConfiguration(mLocationMode, true, mIconLocation);
 			mBaiduMap.setMyLocationConfigeration(config);
 //			更新经纬度
+=======
+			MyLocationConfiguration config = new //
+					MyLocationConfiguration(LocationMode.NORMAL, true, mIconLocation);
+			mBaiduMap.setMyLocationConfigeration(config);
+			
+>>>>>>> e27a7116dd12eee1ab85b11141cba00743eeb04d
 			mLantitude = location.getLatitude();
 			mLongtitude = location.getLongitude();
 			if(isFirstIn) 
