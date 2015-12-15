@@ -23,7 +23,6 @@
         android:orderInCategory="100"
         android:showAsAction="never"
         android:title="我的位置"/>
-<<<<<<< HEAD
 	
 	<item
         android:id="@+id/id_map_mode_common"
@@ -47,6 +46,4 @@
 	    android:id="@+id/id_add_overlay"
 	    android:showAsAction="never"
 	    android:title="添加覆盖物"></item>
-=======
->>>>>>> e27a7116dd12eee1ab85b11141cba00743eeb04d
 </menu>
